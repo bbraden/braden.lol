@@ -9,7 +9,7 @@ body {
 
   body::before {
     content: "";
-    background-image: url("mob.gif");
+    background-image: url("assets/mob.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

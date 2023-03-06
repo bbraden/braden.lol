@@ -28,7 +28,7 @@ incrementBtn.addEventListener("click", () => {
     // Add afterlyfe image
     const afterlyfeImg = document.createElement('img');
     afterlyfeImg.title = 'Afterlyfe - yeat';
-    afterlyfeImg.src = 'afterlyfe.png';
+    afterlyfeImg.src = 'music/afterlyfe.png';
     afterlyfeImg.classList.add('hover-zoom');
     afterlyfeImg.id = 'afterlyfeImg';
     document.body.appendChild(afterlyfeImg);
@@ -36,7 +36,7 @@ incrementBtn.addEventListener("click", () => {
     // Add lyfe image
     const lyfeImg = document.createElement('img');
     lyfeImg.title = 'Lyfe - yeat';
-    lyfeImg.src = 'lyfe.png';
+    lyfeImg.src = 'music/lyfe.png';
     lyfeImg.classList.add('hover-zoom');
     lyfeImg.id = 'lyfeImg';
     document.body.appendChild(lyfeImg);
@@ -44,7 +44,7 @@ incrementBtn.addEventListener("click", () => {
     // Add lyfe image
     const aliveImg = document.createElement('img');
     aliveImg.title = '2 Alive - yeat';
-    aliveImg.src = '2alive.png';
+    aliveImg.src = 'music/2alive.png';
     aliveImg.classList.add('hover-zoom');
     aliveImg.id = 'aliveImg';
     document.body.appendChild(aliveImg);
@@ -62,7 +62,7 @@ incrementBtn.addEventListener("click", () => {
     const instagramLogo = document.createElement('a');
     instagramLogo.href = 'https://www.instagram.com/vhs2';
     const logoImage = document.createElement('img');
-    logoImage.src = 'instagram.png';
+    logoImage.src = 'assets/instagram.png';
     logoImage.id = 'instagram';
     instagramLogo.appendChild(logoImage);
     document.body.appendChild(instagramLogo);
