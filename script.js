@@ -73,5 +73,60 @@ incrementBtn.addEventListener("click", () => {
     music.id = 'music';
     document.body.appendChild(music);
 
+    // domain collection
+    const domains = document.createElement('b');
+    domains.innerText = 'domains';
+    domains.id = 'domains';
+    document.body.appendChild(domains)
+
+    // Add tonka.lol image
+    const tonka = document.createElement('img');
+    tonka.title = 'tonka.lol';
+    tonka.src = 'domains/tonkalol.png';
+    tonka.classList.add('hover-zoom');
+    tonka.id = 'domain';
+    document.body.appendChild(tonka);
+
+    // Add tonka.lol image
+    const afterlyfelol = document.createElement('img');
+    afterlyfelol.title = 'afterlyfe.lol';
+    afterlyfelol.src = 'domains/afterlyfelol.png';
+    afterlyfelol.classList.add('hover-zoom');
+    afterlyfelol.id = 'domain';
+    document.body.appendChild(afterlyfelol);
+
+    // Add tonka.lol image
+    const hoodielol = document.createElement('img');
+    hoodielol.title = 'hoodie.lol';
+    hoodielol.src = 'domains/hoodielol.png';
+    hoodielol.classList.add('hover-zoom');
+    hoodielol.id = 'domain';
+    document.body.appendChild(hoodielol);
+
+    // Add tonka.lol image
+    const turbanlol = document.createElement('img');
+    turbanlol.title = 'turban.lol';
+    turbanlol.src = 'domains/turbanlol.png';
+    turbanlol.classList.add('hover-zoom');
+    turbanlol.id = 'domain';
+    document.body.appendChild(turbanlol);
+
+    // Add tonka.lol image
+    const twizzylol = document.createElement('img');
+    twizzylol.title = 'twizzy.lol';
+    twizzylol.src = 'domains/twizzylol.png';
+    twizzylol.classList.add('hover-zoom');
+    twizzylol.id = 'domain';
+    document.body.appendChild(twizzylol);
+
+    // Add tonka.lol image
+    const uruslol = document.createElement('img');
+    uruslol.title = 'urus.lol';
+    uruslol.src = 'domains/uruslol.png';
+    uruslol.classList.add('hover-zoom');
+    uruslol.id = 'domain';
+    document.body.appendChild(uruslol);
+
+
   }
 });

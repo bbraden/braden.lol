@@ -68,6 +68,17 @@ body {
     background-size: 1500% 1500%;
     animation: rainbow 12s ease infinite;
   }
+
+  #domains {
+    position: fixed;
+    left: 100px;
+    top: 420px;
+    font-size: 50px;
+    color: white;
+    background: linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #EE82EE);
+    background-size: 1500% 1500%;
+    animation: rainbow 12s ease infinite;
+  }
   
   @keyframes rainbow {
     0% {
@@ -110,6 +121,11 @@ body {
     transform: scale(1.1);
   }
 
+  #domain {
+    top: 480px;
+  }
+
+  /* music */
   img:nth-child(1) {
     left: 100px;
   }
@@ -120,4 +136,24 @@ body {
 
   img:nth-child(3) {
     left: 300px;
+  }
+
+  /* domains */
+  img:nth-child(8) {
+    left: 100px;
+  }
+  img:nth-child(9) {
+    left: 250px;
+  }
+  img:nth-child(10) {
+    left: 400px;
+  }
+  img:nth-child(11) {
+    left: 550px;
+  }
+  img:nth-child(12) {
+    left: 700px;
+  }
+  img:nth-child(13) {
+    left: 850px;
   }
