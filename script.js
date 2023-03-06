@@ -1,4 +1,33 @@
-const backgrounds = ['assets/mob.gif', 'assets/mob2.gif', 'assets/mob3.gif', 'assets/mob4.gif'];
+// Replace YOUR_API_KEY with your actual Google API key
+const apiKey = 'AIzaSyB0mtZ0d-osE7DBA_UO8MoB5-VIjJJBybI';
+
+// The name of the location you want to get the weather for
+const locationName = 'Fort Worth, Texas';
+
+// Construct the URL to the Google Places API
+const placesUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${locationName}&inputtype=textquery&fields=formatted_address,geometry&key=${apiKey}`;
+
+// Fetch the location data from the Google Places API
+fetch(placesUrl)
+  .then(response => response.json())
+  .then(data => {
+    const { lat, lng } = data.candidates[0].geometry.location;
+    
+    // Construct the URL to the OpenWeatherMap API
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${apiKey}`;
+
+    // Fetch the weather data from the OpenWeatherMap API
+    fetch(weatherUrl)
+      .then(response => response.json())
+      .then(data => {
+        const temperature = Math.round(data.main.temp - 273.15);
+        const description = data.weather[0].description;
+        console.log(`The temperature in ${locationName} is ${temperature}°C and the weather is ${description}.`);
+      });
+  });
+
+
+  const backgrounds = ['assets/mob.gif', 'assets/mob2.gif', 'assets/mob3.gif', 'assets/mob4.gif'];
 const randomNum = Math.floor(Math.random() * backgrounds.length);
 
 // Create a new style element
@@ -27,6 +56,32 @@ const counter = document.querySelector(".counter");
 const title = document.querySelector("#title");
 const incrementBtn = document.querySelector("#incrementBtn");
 const instagram = document.querySelector("#instagram");
+
+const password = 'password';
+
+const passwordInput = document.createElement("input");
+passwordInput.type = "text";
+passwordInput.placeholder = "enter to submit...";
+passwordInput.id = 'passwordInput';
+document.body.appendChild(passwordInput);
+
+passwordInput.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    if (passwordInput.value === password) {
+      passwordInput.placeholder = 'correct...';
+      passwordInput.value = '';
+      passwordInput.style.borderColor = "#16ba42";
+      passwordInput.style.background = "linear-gradient(to bottom right, #9ef5b0, #34a853)";
+
+    } else {
+      passwordInput.placeholder = 'wrong... try again';
+      passwordInput.value = '';
+      passwordInput.style.borderColor = "#ba2116";
+      passwordInput.style.background = "linear-gradient(to bottom right, #ff8c8c, #B71C1C)";
+    }
+  }
+});
+
 
 let count = 0;
 
@@ -161,6 +216,6 @@ incrementBtn.addEventListener("click", () => {
     uruslol.id = 'domain';
     document.body.appendChild(uruslol);
 
-
+    document.body.appendChild(passwordInput);
   }
 });

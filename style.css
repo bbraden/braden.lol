@@ -17,6 +17,19 @@
     text-align: center;
   }
   
+  #passwordInput {
+    font-weight: bold;
+    border-radius: 5px;
+    position: fixed;
+    top: 85px;
+  }
+
+  #passwordInput::placeholder {
+    font-weight: normal;
+    text-align: center;
+    color: black;
+  }
+
   #incrementBtn {
     text-shadow: 2px 2px 5px #888;
     box-shadow: 2px 2px 5px #888;
