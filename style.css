@@ -108,6 +108,12 @@
 
   #domain {
     top: 480px;
+    position: fixed;
+  }
+
+  #musicID {
+    top: 245px;
+    position: fixed;
   }
 
   /* music */

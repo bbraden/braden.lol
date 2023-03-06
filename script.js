@@ -55,7 +55,7 @@ incrementBtn.addEventListener("click", () => {
     afterlyfeImg.title = 'Afterlyfe - yeat';
     afterlyfeImg.src = 'music/afterlyfe.png';
     afterlyfeImg.classList.add('hover-zoom');
-    afterlyfeImg.id = 'afterlyfeImg';
+    afterlyfeImg.id = 'musicID';
     document.body.appendChild(afterlyfeImg);
 
     afterlyfeImg.addEventListener('click', () => {
@@ -66,7 +66,7 @@ incrementBtn.addEventListener("click", () => {
     lyfeImg.title = 'Lyfe - yeat';
     lyfeImg.src = 'music/lyfe.png';
     lyfeImg.classList.add('hover-zoom');
-    lyfeImg.id = 'lyfeImg';
+    lyfeImg.id = 'musicID';
     document.body.appendChild(lyfeImg);
     lyfeImg.addEventListener('click', () => {
       window.open('https://yeat.lnk.to/Lyfe', '_blank')
@@ -77,7 +77,7 @@ incrementBtn.addEventListener("click", () => {
     aliveImg.title = '2 Alive - yeat';
     aliveImg.src = 'music/2alive.png';
     aliveImg.classList.add('hover-zoom');
-    aliveImg.id = 'aliveImg';
+    aliveImg.id = 'musicID';
     document.body.appendChild(aliveImg);
     aliveImg.addEventListener('click', () => {
       window.open('https://yeat.lnk.to/2Alive', '_blank')
