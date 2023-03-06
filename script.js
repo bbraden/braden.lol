@@ -1,3 +1,28 @@
+const backgrounds = ['assets/mob.gif', 'assets/mob2.gif', 'assets/mob3.gif', 'assets/mob4.gif'];
+const randomNum = Math.floor(Math.random() * backgrounds.length);
+
+// Create a new style element
+var style = document.createElement('style');
+// Set the CSS rules
+style.innerHTML = `
+  body::before {
+    content: "";
+    background-image: url("${backgrounds[randomNum]}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px); /* Add a 5-pixel blur effect */
+    z-index: -1;
+  }
+`;
+document.head.appendChild(style);
+
+
 const counter = document.querySelector(".counter");
 const title = document.querySelector("#title");
 const incrementBtn = document.querySelector("#incrementBtn");
@@ -33,6 +58,9 @@ incrementBtn.addEventListener("click", () => {
     afterlyfeImg.id = 'afterlyfeImg';
     document.body.appendChild(afterlyfeImg);
 
+    afterlyfeImg.addEventListener('click', () => {
+      window.open('https://yeat.lnk.to/Afterlyfe', '_blank')
+    });
     // Add lyfe image
     const lyfeImg = document.createElement('img');
     lyfeImg.title = 'Lyfe - yeat';
@@ -40,6 +68,9 @@ incrementBtn.addEventListener("click", () => {
     lyfeImg.classList.add('hover-zoom');
     lyfeImg.id = 'lyfeImg';
     document.body.appendChild(lyfeImg);
+    lyfeImg.addEventListener('click', () => {
+      window.open('https://yeat.lnk.to/Lyfe', '_blank')
+    });
 
     // Add lyfe image
     const aliveImg = document.createElement('img');
@@ -48,6 +79,9 @@ incrementBtn.addEventListener("click", () => {
     aliveImg.classList.add('hover-zoom');
     aliveImg.id = 'aliveImg';
     document.body.appendChild(aliveImg);
+    aliveImg.addEventListener('click', () => {
+      window.open('https://yeat.lnk.to/2Alive', '_blank')
+    });
 
     // Add title
     const aTitle = document.createElement('a');
