@@ -7,6 +7,7 @@
     margin: 0;
   }
   
+  
   .counter {
     font-size: 50px;
     color: white;
@@ -32,13 +33,32 @@
   }
 
   #incrementBtn {
-    text-shadow: 2px 2px 5px #888;
-    box-shadow: 2px 2px 5px #888;
-    padding: 0.5em 1em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 3px rgba(255, 255, 255, 0.4);
+    padding: 0.5rem 1rem;
     font-weight: bold;
-    font-family: Arial, sans-serif;
-    transform: translateY(25%) translateZ(25%);;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: translateY(25%) translateZ(25%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000);
+    background-size: 200% auto;
+    animation: rainbow 5s ease infinite;
   }
+  
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
 
   .buttonHover {
     transition: transform 0.5s;

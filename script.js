@@ -1,6 +1,6 @@
 let song = 'Nothing!';
 
-const accessToken = 'BQC4XLxxRhdGYm-Qplfa2-XpK9MA8bzGrCcM-LvoXbfERdD57XVYWV1YWFnO70-bOyeISalRwHidnyaYfZn7nWvQ1uOWXP45-X70g2CKwLwkxmFtNzYXqHvYeifvNT_ouZXtzhj8f2HusJmtNO9pRstQ0UMFUy-ZuckBqJbFjG99X0HrmIEOPB_joWweTvsxfHi81vfOHw';
+const accessToken = 'BQB-2_n6iSBtrafN7yCFs1vYM_fKM8t7ve14mPVnOcRzIx7OJVwdBsAXIKx2to-yrHn0BiIAbvYFtBS9NQA9A1f3yUzKVIscuIvW-3h-9pOjd_4KpeCJLNseELMY8dI6YuRR_BB1NstKGrGkACfd2Edq9rcCUsp8rh3htBPqcs74y4k5x08vDhz6YMibHX90qLHVDPXSPAP';
 fetch('https://api.spotify.com/v1/me/player/currently-playing', {
   headers: {
     'Authorization': 'Bearer ' + accessToken
@@ -15,7 +15,6 @@ fetch('https://api.spotify.com/v1/me/player/currently-playing', {
 .catch(
   error => title.innerText = title.innerText + ' Nothing' + ' 🎵'
 );
-
 
 
 const backgrounds = ['assets/mob.gif', 'assets/mob2.gif', 'assets/mob3.gif', 'assets/mob4.gif'];
