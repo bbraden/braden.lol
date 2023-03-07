@@ -12,7 +12,9 @@ fetch('https://api.spotify.com/v1/me/player/currently-playing', {
   console.log(song);
   title.innerText = title.innerText + ' ' + song + ' 🎵';
 })
-.catch(error => console.error(error));
+.catch(
+  error => title.innerText = title.innerText + ' Nothing' + ' 🎵'
+);
 
 
 
