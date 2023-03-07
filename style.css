@@ -21,7 +21,8 @@
     font-weight: bold;
     border-radius: 5px;
     position: fixed;
-    top: 85px;
+    bottom: 25px;
+    right: 25px;
   }
 
   #passwordInput::placeholder {

@@ -1,33 +1,22 @@
-// Replace YOUR_API_KEY with your actual Google API key
-const apiKey = 'AIzaSyB0mtZ0d-osE7DBA_UO8MoB5-VIjJJBybI';
+let song = 'Nothing!';
 
-// The name of the location you want to get the weather for
-const locationName = 'Fort Worth, Texas';
-
-// Construct the URL to the Google Places API
-const placesUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${locationName}&inputtype=textquery&fields=formatted_address,geometry&key=${apiKey}`;
-
-// Fetch the location data from the Google Places API
-fetch(placesUrl)
-  .then(response => response.json())
-  .then(data => {
-    const { lat, lng } = data.candidates[0].geometry.location;
-    
-    // Construct the URL to the OpenWeatherMap API
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${apiKey}`;
-
-    // Fetch the weather data from the OpenWeatherMap API
-    fetch(weatherUrl)
-      .then(response => response.json())
-      .then(data => {
-        const temperature = Math.round(data.main.temp - 273.15);
-        const description = data.weather[0].description;
-        console.log(`The temperature in ${locationName} is ${temperature}°C and the weather is ${description}.`);
-      });
-  });
+const accessToken = 'BQC4XLxxRhdGYm-Qplfa2-XpK9MA8bzGrCcM-LvoXbfERdD57XVYWV1YWFnO70-bOyeISalRwHidnyaYfZn7nWvQ1uOWXP45-X70g2CKwLwkxmFtNzYXqHvYeifvNT_ouZXtzhj8f2HusJmtNO9pRstQ0UMFUy-ZuckBqJbFjG99X0HrmIEOPB_joWweTvsxfHi81vfOHw';
+fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+  headers: {
+    'Authorization': 'Bearer ' + accessToken
+  }
+})
+.then(response => response.json())
+.then(data => {
+  song = data.item.name + ' - ' + data.item.artists[0].name;
+  console.log(song);
+  title.innerText = title.innerText + ' ' + song + ' 🎵';
+})
+.catch(error => console.error(error));
 
 
-  const backgrounds = ['assets/mob.gif', 'assets/mob2.gif', 'assets/mob3.gif', 'assets/mob4.gif'];
+
+const backgrounds = ['assets/mob.gif', 'assets/mob2.gif', 'assets/mob3.gif', 'assets/mob4.gif'];
 const randomNum = Math.floor(Math.random() * backgrounds.length);
 
 // Create a new style element
@@ -54,6 +43,7 @@ document.head.appendChild(style);
 
 const counter = document.querySelector(".counter");
 const title = document.querySelector("#title");
+let titleText = title.innerText;
 const incrementBtn = document.querySelector("#incrementBtn");
 const instagram = document.querySelector("#instagram");
 
@@ -103,6 +93,7 @@ incrementBtn.addEventListener("click", () => {
 
   if (count === 10) {
     // Remove other elements
+    titleText = title.innerText;
     document.body.innerHTML = '';
 
     // Add afterlyfe image
@@ -143,7 +134,7 @@ incrementBtn.addEventListener("click", () => {
     aTitle.href = 'https://www.example.com/';
     const newTitle = document.createElement('b');
     newTitle.id = 'title';
-    newTitle.innerText = 'braden @ 2023';
+    newTitle.innerText = titleText;
     aTitle.appendChild(newTitle);
     document.body.appendChild(aTitle);
 
